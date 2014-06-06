@@ -1,3 +1,8 @@
+" https://twitter.com/hakuu0/status/282424815330148352
+" To avoid getting "Not an editor command: NeoBundleFetch" Error,
+" do git config --global core.editor 'vim -c "set fenc=utf-8"'
+
+
 "NeoBundle Scripts-----------------------------
 if has('vim_starting')
   set nocompatible               " Be iMproved
@@ -47,6 +52,13 @@ NeoBundle 'bling/vim-airline'
   set noshowmode
 
 NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'nathanaelkane/vim-indent-guides'
+  let g:indent_guides_enable_on_vim_startup=1
+  let g:indent_guides_start_level=2
+  let g:indent_guides_guide_size=1
+  let g:indent_guides_auto_colors = 0
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#262626 ctermbg=gray
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#3c3c3c ctermbg=darkgray
 
 call neobundle#end()
 
@@ -116,3 +128,6 @@ hi Comment ctermfg=6 cterm=NONE
 
 " allow backspacing over everything in insert mode
 set bs=indent,eol,start
+
+" highlight current line
+set cursorline
