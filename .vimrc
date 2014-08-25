@@ -60,6 +60,8 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
   autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#262626 ctermbg=gray
   autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#3c3c3c ctermbg=darkgray
 
+NeoBundle 'gregsexton/gitv'
+
 call neobundle#end()
 
 " Required
