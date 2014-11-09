@@ -31,10 +31,20 @@ NeoBundle 'mattn/gist-vim'
 
 NeoBundle has('lua') ? 'Shougo/neocomplete' : 'Shougo/neocomplcache'
 if neobundle#is_installed('neocomplete')
+  " Disable AutoComplPop.
+  let g:acp_enableAtStartup = 0
+  let g:neocomplete#enable_at_startup = 1
+  " Use smartcase.
+  let g:neocomplete#enable_smart_case = 1
+  let g:neocomplete#sources#syntax#min_keyword_length = 3
   let g:neocomplete#sources#dictionary#dictionaries = {
     \ 'default' : '',
     \ 'perl' : $HOME.'/.vim/dict/perl.dict',
     \ }
+  if !exists('g:neocomplete#keyword_patterns')
+    let g:neocomplete#keyword_patterns = {}
+  endif
+  let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 elseif neobundle#is_installed('neocomplcache')
   " Disable AutoComplPop.
   let g:acp_enableAtStartup = 0
@@ -49,6 +59,10 @@ elseif neobundle#is_installed('neocomplcache')
     \ 'default' : '',
     \ 'perl' : $HOME.'/.vim/dict/perl.dict',
     \ }
+  if !exists('g:neocomplcache_keyword_patterns')
+    let g:neocomplcache_keyword_patterns = {}
+  endif
+  let g:neocomplcache_keyword_patterns['default'] = '\h\w*'
 endif
 
 "NeoBundle 'Lokaltog/vim-powerline'
@@ -73,6 +87,8 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
 
 NeoBundle 'gregsexton/gitv'
 NeoBundle 'davidhalter/jedi-vim'
+  " Don't allow 'completeopt+=preview' on auto config
+  let g:jedi#auto_vim_configuration = 0
 " -------------------------------------------------------------------------
 " Avoid confliction w/ pythoncomplete
   let g:jedi#auto_initialization = 1
