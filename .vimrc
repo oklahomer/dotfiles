@@ -1,3 +1,5 @@
+let $PATH = "~/.pyenv/shims:".$PATH
+
 " https://twitter.com/hakuu0/status/282424815330148352
 " To avoid getting "Not an editor command: NeoBundleFetch" Error,
 " do git config --global core.editor 'vim -c "set fenc=utf-8"'
@@ -61,6 +63,15 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
   autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#3c3c3c ctermbg=darkgray
 
 NeoBundle 'gregsexton/gitv'
+NeoBundle 'davidhalter/jedi-vim'
+" -------------------------------------------------------------------------
+" Avoid confliction w/ pythoncomplete
+  let g:jedi#auto_initialization = 1
+  let g:jedi#rename_command = "<leader>R"
+  let g:jedi#popup_on_dot = 1
+  let g:jedi#popup_select_first = 0
+  autocmd FileType python let b:did_ftplugin = 1
+"" -------------------------------------------------------------------------
 
 call neobundle#end()
 
@@ -115,6 +126,12 @@ autocmd BufNewFile,BufRead *.tt   set filetype=html
 autocmd BufNewFile,BufRead *.tx   set filetype=html
 autocmd BufNewFile,BufRead *.t    set filetype=perl
 autocmd BufNewFile,BufRead *.psgi set filetype=perl
+
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 set iskeyword+=:
 
