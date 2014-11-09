@@ -27,7 +27,15 @@ NeoBundle 'dagolden/vim-hl-var'
   let g:hlvarhl="ctermbg=green ctermfg=red guifg=#ff0000 guibg=#000000 gui=bold"
 
 NeoBundle 'mattn/gist-vim'
-NeoBundle 'Shougo/neocomplcache'
+
+
+NeoBundle has('lua') ? 'Shougo/neocomplete' : 'Shougo/neocomplcache'
+if neobundle#is_installed('neocomplete')
+  let g:neocomplete#sources#dictionary#dictionaries = {
+    \ 'default' : '',
+    \ 'perl' : $HOME.'/.vim/dict/perl.dict',
+    \ }
+elseif neobundle#is_installed('neocomplcache')
   " Disable AutoComplPop.
   let g:acp_enableAtStartup = 0
   " Use neocomplcache.
@@ -41,6 +49,7 @@ NeoBundle 'Shougo/neocomplcache'
     \ 'default' : '',
     \ 'perl' : $HOME.'/.vim/dict/perl.dict',
     \ }
+endif
 
 "NeoBundle 'Lokaltog/vim-powerline'
 NeoBundle 'bling/vim-airline'
