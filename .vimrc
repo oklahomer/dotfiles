@@ -133,3 +133,10 @@ set bs=indent,eol,start
 
 " highlight current line
 set cursorline
+
+" let j & k move by rows rather than lines
+nnoremap j gj
+nnoremap k gk
+
+" incremental search
+set incsearch
