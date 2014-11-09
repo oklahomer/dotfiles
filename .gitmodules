@@ -1,0 +1,3 @@
+[submodule "submodules/cside_dotfiles"]
+	path = submodules/cside_dotfiles
+	url = https://github.com/Cside/dotfiles.git
