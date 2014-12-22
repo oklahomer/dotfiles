@@ -27,6 +27,7 @@ NeoBundle 'dagolden/vim-hl-var'
   let g:hlvarhl="ctermbg=green ctermfg=red guifg=#ff0000 guibg=#000000 gui=bold"
 
 NeoBundle 'mattn/gist-vim'
+NeoBundle 'vim-scripts/Align'
 
 
 NeoBundle has('lua') ? 'Shougo/neocomplete' : 'Shougo/neocomplcache'
