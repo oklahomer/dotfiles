@@ -99,6 +99,8 @@ NeoBundle 'davidhalter/jedi-vim'
   autocmd FileType python let b:did_ftplugin = 1
 "" -------------------------------------------------------------------------
 
+NeoBundle 'thinca/vim-localrc'
+
 call neobundle#end()
 
 " Required
