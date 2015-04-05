@@ -26,7 +26,22 @@ NeoBundle 'dagolden/vim-hl-var'
   set updatetime=300
   let g:hlvarhl="ctermbg=green ctermfg=red guifg=#ff0000 guibg=#000000 gui=bold"
 
+NeoBundle 'mattn/webapi-vim' " Required for gist-vim
+" Run `git config --global github.user GITHUB_USERNAME` before initialization.
 NeoBundle 'mattn/gist-vim'
+  " Private by default
+  let g:gist_show_privates = 1
+  let g:gist_post_private = 1
+
+  " Open gist in new splitted window, so current editing buffers stay.
+  let g:gist_edit_with_buffers = 1
+
+  " Allow update if and only if :w! . Set 1 to allow :w .
+  let g:gist_update_on_write = 2
+
+  let g:gist_detect_filetype = 1
+  let g:gist_open_browser_after_post = 1
+
 NeoBundle 'vim-scripts/Align'
 
 
@@ -77,7 +92,6 @@ NeoBundle 'bling/vim-airline'
   set laststatus=2
   set noshowmode
 
-NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'nathanaelkane/vim-indent-guides'
   let g:indent_guides_enable_on_vim_startup=1
   let g:indent_guides_start_level=2
@@ -86,7 +100,9 @@ NeoBundle 'nathanaelkane/vim-indent-guides'
   autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#262626 ctermbg=gray
   autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#3c3c3c ctermbg=darkgray
 
+NeoBundle 'tpope/vim-fugitive' " Required for gitv
 NeoBundle 'gregsexton/gitv'
+
 NeoBundle 'davidhalter/jedi-vim'
   " Don't allow 'completeopt+=preview' on auto config
   let g:jedi#auto_vim_configuration = 0
@@ -98,6 +114,8 @@ NeoBundle 'davidhalter/jedi-vim'
   let g:jedi#popup_select_first = 0
   autocmd FileType python let b:did_ftplugin = 1
 "" -------------------------------------------------------------------------
+
+NeoBundle 'fs111/pydoc.vim'
 
 NeoBundle 'thinca/vim-localrc'
 
