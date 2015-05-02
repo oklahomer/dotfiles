@@ -117,6 +117,43 @@ NeoBundle 'davidhalter/jedi-vim'
 
 NeoBundle 'fs111/pydoc.vim'
 
+" If necessary, `cd .vim/bundle/pyflakes-vim' and git submodule ....
+" TODO quickfix display
+NeoBundle 'kevinw/pyflakes-vim'
+  let g:pyflakes_use_quickfix = 1
+
+"" when '"vimproc_linux64.so" is not found.' occurres, `cd ~/.vim/bundle/vimproc` and `make`
+"NeoBundle "osyo-manga/vim-watchdogs", {
+"  \ "depends": [
+"  \   "Shougo/vimproc", "thinca/vim-quickrun", "dannyob/quickfixstatus",
+"  \   "osyo-manga/shabadou.vim", "cohama/vim-hier"
+"  \ ]}
+"if ! empty(neobundle#get("vim-watchdogs"))
+"  let g:watchdogs_check_BufWritePost_enable = 1
+"  let g:watchdogs_check_CursorHold_enables = {
+"    \   "python"     : 1,
+"    \}
+"
+"  if !exists("g:quickrun_config")
+"    let g:quickrun_config = {}
+"  endif
+"
+"  " TODO Handling with virtualenv like below case
+"  " 'The `pyflakes' command exists in these Python versions: FOO'
+"  let s:flake8 = system('flake8 --version 2>/dev/null')
+"    if s:flake8 != ""
+"      let g:quickrun_config["python/watchdogs_checker"] = {
+"        \ "type" : "watchdogs_checker/flake8",
+"        \ "outputter" : "quickfix",
+"        \ }
+"  endif
+"
+"  autocmd InsertLeave,TextChanged *.py :WatchdogsRun
+"
+"  " No longer required. https://github.com/osyo-manga/vim-watchdogs/issues/9
+"  " call watchdogs#setup(g:quickrun_config)
+"endif
+
 NeoBundle 'thinca/vim-localrc'
 
 call neobundle#end()
