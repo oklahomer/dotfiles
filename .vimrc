@@ -240,3 +240,7 @@ nnoremap k gk
 
 " incremental search
 set incsearch
+
+" Change color for syntax check
+highlight clear SpellBad
+highlight SpellBad term=bold cterm=bold guibg=DarkGray ctermbg=DarkGray
