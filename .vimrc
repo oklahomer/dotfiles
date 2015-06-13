@@ -243,4 +243,4 @@ set incsearch
 
 " Change color for syntax check
 highlight clear SpellBad
-highlight SpellBad term=bold cterm=bold guibg=DarkGray ctermbg=DarkGray
+highlight SpellBad term=bold cterm=bold guibg=Green ctermbg=Green
