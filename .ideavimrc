@@ -1,0 +1,17 @@
+""" start search/match
+set ignorecase
+set smartcase
+set incsearch
+set wrapscan "re-search from the top of the file when hit the bottom line
+
+set hlsearch " highlight matching results
+nnoremap <silent> <C-l> :nohlsearch<CR><C-l>| " <Ctrl-l> redraws highlighting.
+""" end search
+
+set scrolloff=10 " cursor offset
+
+set showmatch
+
+" let j & k move by rows rather than lines
+nnoremap j gj
+nnoremap k gk
