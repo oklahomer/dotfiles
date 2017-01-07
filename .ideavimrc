@@ -15,3 +15,6 @@ set showmatch
 " let j & k move by rows rather than lines
 nnoremap j gj
 nnoremap k gk
+
+" use visual bell instead of beep sound
+set visualbell
