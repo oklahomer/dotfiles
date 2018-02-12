@@ -93,6 +93,30 @@
                         ]
                     },
                     {
+                        "description": "Move focus to next window within the same app",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "tab",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "f1",
+                                        "modifiers": [
+                                            "left_command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Change right_command+hjkl to arrow keys",
                         "manipulators": [
                             {
@@ -174,7 +198,7 @@
                         ]
                     },
                     {
-                        "description": "For JetBrains window manipulations",
+                        "description": "JetBrains: window manipulations",
                         "manipulators": [
                             {
                                 "conditions": [
