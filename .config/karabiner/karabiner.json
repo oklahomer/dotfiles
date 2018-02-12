@@ -14,7 +14,7 @@
                 },
                 "rules": [
                     {
-                        "description": "General",
+                        "description": "Use right command + [] to switch tab",
                         "manipulators": [
                             {
                                 "from": {
@@ -51,6 +51,40 @@
                                         "modifiers": [
                                             "left_command",
                                             "left_shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Paste without formatting",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "com.jetbrains"
+                                        ],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "v",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "v",
+                                        "modifiers": [
+                                            "left_command",
+                                            "left_shift",
+                                            "left_option"
                                         ]
                                     }
                                 ],
@@ -140,7 +174,7 @@
                         ]
                     },
                     {
-                        "description": "For JetBrains",
+                        "description": "For JetBrains window manipulations",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -196,7 +230,12 @@
                                     }
                                 ],
                                 "type": "basic"
-                            },
+                            }
+                        ]
+                    },
+                    {
+                        "description": "JetBrains: paste items from clipboard history",
+                        "manipulators": [
                             {
                                 "conditions": [
                                     {
