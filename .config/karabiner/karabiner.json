@@ -354,7 +354,7 @@
                         ]
                     },
                     {
-                        "description": "Use right command + [] to switch tab",
+                        "description": "Use right command + a/s to switch tab",
                         "manipulators": [
                             {
                                 "from": {
@@ -399,7 +399,7 @@
                         ]
                     },
                     {
-                        "description": "Paste without formatting",
+                        "description": "Use right_command+v to paste without formatting",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -433,7 +433,7 @@
                         ]
                     },
                     {
-                        "description": "Move focus to next window within the same app",
+                        "description": "Use right_command+tab to switch focus to next window within the same app",
                         "manipulators": [
                             {
                                 "from": {
@@ -457,7 +457,7 @@
                         ]
                     },
                     {
-                        "description": "Change right_command+hjkl to arrow keys",
+                        "description": "Use right_command+hjkl to arrow keys",
                         "manipulators": [
                             {
                                 "from": {
