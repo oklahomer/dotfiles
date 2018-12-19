@@ -15,17 +15,17 @@
                 },
                 "rules": [
                     {
-                        "description": " [Ergodox] Change spacebar to left_control. (Post spacebar if pressed alone)",
+                        "description": "[Ergodox] Change spacebar to left_control. (Post spacebar if pressed alone)",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
-                                        "type": "device_if",
                                         "identifiers": [
                                             {
                                                 "vendor_id": 65261
                                             }
-                                        ]
+                                        ],
+                                        "type": "device_if"
                                     }
                                 ],
                                 "from": {
@@ -56,12 +56,12 @@
                             {
                                 "conditions": [
                                     {
-                                        "type": "device_if",
                                         "identifiers": [
                                             {
                                                 "vendor_id": 65261
                                             }
-                                        ]
+                                        ],
+                                        "type": "device_if"
                                     }
                                 ],
                                 "from": {
@@ -87,17 +87,68 @@
                         ]
                     },
                     {
+                        "description": "Use left or right command key to select input source",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_command",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_command"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "select_input_source": {
+                                            "input_source_id": "com.apple.keylayout.US"
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "right_command",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_command"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "select_input_source": {
+                                            "input_source_id": "com.google.inputmethod.Japanese.base"
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "[Ergodox] Switch input source",
                         "manipulators": [
                             {
                                 "conditions": [
                                     {
-                                        "type": "device_if",
                                         "identifiers": [
                                             {
                                                 "vendor_id": 65261
                                             }
-                                        ]
+                                        ],
+                                        "type": "device_if"
                                     }
                                 ],
                                 "from": {
