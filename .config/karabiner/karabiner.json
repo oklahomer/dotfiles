@@ -87,8 +87,8 @@
                         ]
                     },
                     {
-                        "description": "Use left or right command key to select input source",
                         "_comment": "OS has a bug that fails to handle switching language programatically: https://github.com/tekezo/Karabiner-Elements/issues/1602#issuecomment-449344670",
+                        "description": "Use left or right command key to select input source",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -578,7 +578,7 @@
                         ]
                     },
                     {
-                        "description": "JetBrains: window manipulations",
+                        "description": "[JetBrains] Use right command + f to open terminal; Use right command + d to close",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -638,7 +638,7 @@
                         ]
                     },
                     {
-                        "description": "JetBrains: paste items from clipboard history",
+                        "description": "[JetBrains] Use right command + v to paste items from clipboard history",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -678,7 +678,7 @@
                         ]
                     },
                     {
-                        "description": "JetBrains: go to implementation. (Command+U goes to super class/method)",
+                        "description": "[JetBrains] Use right command + u to go to implementation. (Command+U goes to super class/method)",
                         "manipulators": [
                             {
                                 "conditions": [
