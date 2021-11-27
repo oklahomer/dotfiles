@@ -1,2 +1,4 @@
 .tmux/plugins/tmux-*
 .tmux/sidebar/
+.vim/bundle
+.vim/bundles

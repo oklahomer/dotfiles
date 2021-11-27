@@ -1,0 +1,46 @@
+[[plugins]]
+repo = 'cespare/vim-toml'
+
+[[plugins]]
+repo = 'vim-scripts/Align'
+
+[[plugins]]
+repo = 'mattn/webapi-vim'
+
+[[plugins]]
+# Run `git config --global github.user GITHUB_USERNAME` before initialization.
+repo = 'mattn/gist-vim'
+hook_add = '''
+  " Private by default
+  let g:gist_show_privates = 1
+  let g:gist_post_private = 1
+
+  " Open gist in new splitted window, so current editing buffers stay.
+  let g:gist_edit_with_buffers = 1
+
+  " Allow update if and only if :w! . Set 1 to allow :w .
+  let g:gist_update_on_write = 2
+
+  let g:gist_detect_filetype = 1
+  let g:gist_open_browser_after_post = 1
+'''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+
+[[plugins]]
+repo = 'powerline/powerline'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+depends = ['vim-airline/vim-airline-themes', 'powerline/powerline']
+hook_add = '''
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline_theme = 'molokai'
+  " let g:airline_theme = 'powerlineish'
+  " On OSX wget https://gist.github.com/baopham/1838072/raw/2c0e00770826e651d1e355962e751325edb0f1ee/Monaco%20for%20Powerline.otf and move it to ~/Library/Fonts/
+  " Then select Monaco for Powerline in Terminal's font setting
+  let g:airline_powerline_fonts=1
+  set laststatus=2
+  set noshowmode
+'''
