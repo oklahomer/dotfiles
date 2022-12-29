@@ -549,6 +549,40 @@
                         ]
                     },
                     {
+                        "description": "[Obsidian] Use right command + f to \"maximize active pane\"",
+                        "_link": "https://github.com/deathau/maximise-active-pane-obsidian",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "md.obsidian"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "f",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "right_command"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "x",
+                                        "modifiers": [
+                                            "left_command",
+                                            "left_shift"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "[JetBrains] Use right command + d to open/close terminal window",
                         "_link": "https://www.jetbrains.com/idea/guide/tutorials/working-with-the-terminal/opening-the-terminal-window/",
                         "manipulators": [
