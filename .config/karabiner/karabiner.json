@@ -515,7 +515,8 @@
                         ]
                     },
                     {
-                        "description": "[JetBrains] Use right command + f to open terminal; Use right command + d to close",
+                        "description": "[JetBrains] Use right command + f to \"toggle maximizing editor\"",
+                        "_link": "https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf",
                         "manipulators": [
                             {
                                 "conditions": [
@@ -544,7 +545,13 @@
                                     }
                                 ],
                                 "type": "basic"
-                            },
+                            }
+                        ]
+                    },
+                    {
+                        "description": "[JetBrains] Use right command + d to open/close terminal window",
+                        "_link": "https://www.jetbrains.com/idea/guide/tutorials/working-with-the-terminal/opening-the-terminal-window/",
+                        "manipulators": [
                             {
                                 "conditions": [
                                     {
