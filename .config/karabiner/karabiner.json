@@ -702,7 +702,8 @@
                                         "bundle_identifiers": [
                                             "^com\\.jetbrains\\.",
                                             "^com\\.apple\\.Terminal$",
-                                            "^md\\.obsidian$"
+                                            "^md\\.obsidian$",
+                                            "com.google.android.studio"
                                         ],
                                         "type": "frontmost_application_if"
                                     },
