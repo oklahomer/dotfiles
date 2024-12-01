@@ -40,7 +40,8 @@ if dein#check_install()
 endif
 "dein.vim setting ends--------------------------
 
-colorscheme pablo
+" colorscheme pablo
+colorscheme shades_of_purple
 
 " □,○などの全角記号をズレなくする
 if exists('&ambiwidth')
